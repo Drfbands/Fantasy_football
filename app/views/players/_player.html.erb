@@ -1,0 +1,8 @@
+<%= player.name %>
+<%= player.position %>
+<p><%= player.notes %></p>
+<p><%= player.why %></P>
+<p><%= player.why_not %></p>
+
+<%= button_to "delete", team_player_path(@team, player.id), method: 
+:delete, data: {confirm: "Are you sure" } %><br>

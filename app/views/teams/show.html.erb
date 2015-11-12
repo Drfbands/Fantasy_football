@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @team.name %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @team.notes %>
+</p>
+
+<div id="players_wrapper">
+	<%= render @team.players %>
+	<div id="form">
+	<%= render "players/form" %>
+	</div>
+</div>
+
+
+
+<%= link_to 'Edit', edit_team_path(@team) %> |
+<%= link_to 'Back', teams_path %>
