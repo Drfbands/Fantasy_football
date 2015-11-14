@@ -6,6 +6,22 @@ def create
 	redirect_to @team
 end 
 
+def edit 
+		@player = Player.find(params[:id])
+		@player = @team.players.find(params[:id])
+end 
+
+	def update 
+		@player = Player.find(params[:id])
+		@player = @team.player.find(params[:id])
+		
+		if @team.player.update(team.player_params)
+			redirect_to @team 
+		else 
+			render 'edit'
+		end 
+	end 
+
 	def destroy 
  		@player = @team.players.find(params[:id])
  		if @player.destroy

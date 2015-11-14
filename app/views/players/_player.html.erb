@@ -4,5 +4,7 @@
 <p><%= player.why %></P>
 <p><%= player.why_not %></p>
 
+<%= link_to 'Edit', edit_team_player_path(@team, player.id) %>
+
 <%= button_to "delete", team_player_path(@team, player.id), method: 
 :delete, data: {confirm: "Are you sure" } %><br>
