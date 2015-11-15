@@ -7,16 +7,16 @@ def create
 end 
 
 def edit 
-		@player = Player.find(params[:id])
-		@player = @team.players.find(params[:id])
+		@team = Team.find(params[:id])
+		@player = @team.players(params[:id])
 end 
 
 	def update 
-		@player = Player.find(params[:id])
+		@team = Team.find(params[:team_id])
 		@player = @team.player.find(params[:id])
 		
-		if @team.player.update(team.player_params)
-			redirect_to @team 
+		if player.update(params[:player].permit(:player))
+			redirect_to team_path(@team)
 		else 
 			render 'edit'
 		end 

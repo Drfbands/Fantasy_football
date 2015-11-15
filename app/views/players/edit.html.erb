@@ -1,6 +1,9 @@
 <h1>Editing player</h1>
 
-<%= render 'form' %>
+<%= form_for([@team, @player], :url => edit_team_player_path(@team, @player)) do |f| %>
+<%= f.input :player %> 
+<%= f.submit %> 
+<% end %>  
 
 <%= link_to 'Show', @team %> |
 <%= link_to 'Back', teams_path %>
