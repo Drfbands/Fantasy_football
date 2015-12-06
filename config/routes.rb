@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :focus
+
   get 'welcomes/home'
 
   resources :teams do 

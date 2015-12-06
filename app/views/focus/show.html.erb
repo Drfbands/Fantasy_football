@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @focus.date %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @focus.notes %>
+</p>
+
+<%= link_to 'Edit', edit_focus_path(@focu) %> |
+<%= link_to 'Back', focus_path %>

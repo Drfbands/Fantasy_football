@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151112034807) do
+ActiveRecord::Schema.define(version: 20151206021235) do
+
+  create_table "focus", force: true do |t|
+    t.string   "date"
+    t.text     "notes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "players", force: true do |t|
     t.string   "name"
