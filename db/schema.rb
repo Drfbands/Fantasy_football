@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151206021235) do
+ActiveRecord::Schema.define(version: 20151221000120) do
 
   create_table "focus", force: true do |t|
     t.string   "date"
@@ -33,9 +33,27 @@ ActiveRecord::Schema.define(version: 20151206021235) do
 
   add_index "players", ["team_id"], name: "index_players_on_team_id"
 
+  create_table "previews", force: true do |t|
+    t.string   "things"
+    t.text     "why_most_important"
+    t.text     "why_not"
+    t.string   "time_estimated"
+    t.integer  "focus_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "previews", ["focus_id"], name: "index_previews_on_focus_id"
+
   create_table "teams", force: true do |t|
     t.string   "name"
     t.text     "notes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "workouts", force: true do |t|
+    t.string   "date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

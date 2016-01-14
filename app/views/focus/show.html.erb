@@ -2,13 +2,22 @@
 
 <p>
   <strong>Date:</strong>
-  <%= @focus.date %>
+  <%= @focu.date %>
 </p>
 
 <p>
   <strong>Notes:</strong>
-  <%= @focus.notes %>
+  <%= @focu.notes %>
 </p>
+
+<div id="preview_wrapper">
+	<%= render @focu.previews %>
+	<div id="form">
+	<%= render "preview/form" %>
+	</div>
+</div>
+
+
 
 <%= link_to 'Edit', edit_focus_path(@focu) %> |
 <%= link_to 'Back', focus_path %>

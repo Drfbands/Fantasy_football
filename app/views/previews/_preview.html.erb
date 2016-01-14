@@ -1,0 +1,9 @@
+<p><%= preview.things %></p>
+<p><%= preview.why_most_important %></p>
+<p><%= preview.why_not %></p>
+<p><%= preview.time_estimated %></P>
+
+
+<%= link_to 'Edit', edit_focu_preview_path(preview.focu, preview) %>
+
+<%= button_to "delete", [player.team, player], method: :delete, data: { confirm: "Are you sure" } %><br>
