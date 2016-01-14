@@ -1,0 +1,8 @@
+<%= form_for([@productivity, @productivity.predays.build]) do |f| %>
+
+	<%= f.text_field :thing, placeholder: "Important Thing" %><br>
+	<%= f.text_area :why, placeholder: "Why is it the most important thing?" %><br>
+	<%= f.text_area :whynot, placeholder: "Why Not?" %><br>
+	<%= f.text_area :notes, placeholder: "Notes" %><br>
+	<%= f.submit %>
+<% end %>

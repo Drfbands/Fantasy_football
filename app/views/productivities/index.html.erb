@@ -1,0 +1,25 @@
+<h1>Listing productivities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @productivities.each do |productivity| %>
+      <tr>
+        <td><%= productivity.date %></td>
+        <td><%= link_to 'Show', productivity %></td>
+        <td><%= link_to 'Edit', edit_productivity_path(productivity) %></td>
+        <td><% link_to 'Destroy', productivity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Productivity', new_productivity_path %>
