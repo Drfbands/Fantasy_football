@@ -1,8 +1,0 @@
-<%= form_for ([@focu,  @focu.previews.build]) do |f|  %> 
-
-	<%= f.text_field :things, placeholder: "Most Important Thing" %><br>
-	<%= f.text_area :why_most_important, placeholder: "Why Most Imporant?" %><br>
-	<%= f.text_area :why_not, placeholder: "Why not?" %><br>
-	<%= f.text_field :time_estimated, placeholder: "How long should this take?" %><br>
-	<%= f.submit %>
-<% end %>

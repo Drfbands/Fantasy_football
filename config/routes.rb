@@ -8,8 +8,6 @@ Rails.application.routes.draw do
   	resources :predays 
   end 
 
-  resources :focus
-
 
   get 'welcomes/home'
 
@@ -18,7 +16,5 @@ Rails.application.routes.draw do
   end 
 
   root "welcomes#home"
-
-  resources :workouts
   
 end
