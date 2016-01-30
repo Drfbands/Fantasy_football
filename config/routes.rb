@@ -2,11 +2,12 @@ Rails.application.routes.draw do
 
 
 
-  get 'predays/create'
+  resources :days do 
+    resources :things 
 
-  resources :productivities do 
-  	resources :predays 
   end 
+
+ 
 
 
   get 'welcomes/home'

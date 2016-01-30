@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160114224211) do
+ActiveRecord::Schema.define(version: 20160130044522) do
+
+  create_table "days", force: true do |t|
+    t.string   "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "focus", force: true do |t|
     t.string   "date"
@@ -69,6 +75,21 @@ ActiveRecord::Schema.define(version: 20160114224211) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "things", force: true do |t|
+    t.string   "mostimp"
+    t.text     "notes"
+    t.text     "why"
+    t.text     "whynot"
+    t.text     "time"
+    t.text     "noted"
+    t.text     "growth"
+    t.integer  "day_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "things", ["day_id"], name: "index_things_on_day_id"
 
   create_table "workouts", force: true do |t|
     t.string   "date"

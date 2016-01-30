@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mostimp: MyString
+  notes: MyText
+  why: MyText
+  whynot: MyText
+  time: MyText
+  noted: MyText
+  growth: MyText
+  day_id: 
+
+two:
+  mostimp: MyString
+  notes: MyText
+  why: MyText
+  whynot: MyText
+  time: MyText
+  noted: MyText
+  growth: MyText
+  day_id: 

@@ -1,0 +1,24 @@
+<%= link_to 'Home', root_path %>
+<%= link_to 'Days', days_path %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @day.date %>
+</p>
+
+
+
+<%= render @day.things %> 
+
+
+<h4> Add the most important thing</h4> 
+<div id="form">
+	<%= render "things/form" %>
+	</div>
+  <%#inputs form (don’t copy the inputs form, that a description of what the code does.) %>
+
+
+<%= link_to 'Edit', edit_day_path(@day) %> |
+<%= link_to 'Back', days_path %>
