@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
 
 
+  resources :fits
+
   resources :days do 
     resources :things 
 

@@ -11,10 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160130044522) do
+ActiveRecord::Schema.define(version: 20160131202902) do
 
   create_table "days", force: true do |t|
     t.string   "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "fits", force: true do |t|
+    t.string   "day"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
