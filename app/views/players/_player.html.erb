@@ -6,4 +6,4 @@
 
 <%= link_to 'Edit', edit_team_player_path(player.team, player) %>
 
-<%= button_to "delete", [player.team, player], method: :delete, data: { confirm: "Are you sure" } %><br>
+<% button_to "delete", [player.team, player], method: :delete, data: { confirm: "Are you sure" } %><br>

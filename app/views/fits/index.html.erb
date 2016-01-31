@@ -1,4 +1,4 @@
-<%= link_to 'Home', root_path %>
+<%= link_to 'Home', root_path %><br>
 <h1>Workout Date</h1>
 
 <table>
@@ -15,7 +15,7 @@
         <td><%= fit.day %></td>
         <td><%= link_to 'Show', fit %></td>
         <td><%= link_to 'Edit', edit_fit_path(fit) %></td>
-        <td><%= link_to 'Destroy', fit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><% link_to 'Destroy', fit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
