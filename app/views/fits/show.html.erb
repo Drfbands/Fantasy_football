@@ -5,5 +5,11 @@
   <%= @fit.day %>
 </p>
 
+
+	<%= render @fit.lits %><br>
+
+	<%= render "lits/form" %><br>
+	
+
 <%= link_to 'Edit', edit_fit_path(@fit) %> |
 <%= link_to 'Back', fits_path %>

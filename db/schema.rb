@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160131202902) do
+ActiveRecord::Schema.define(version: 20160131225924) do
+
+  create_table "bits", force: true do |t|
+    t.string   "exercise"
+    t.integer  "set"
+    t.integer  "reps"
+    t.string   "weight"
+    t.string   "time"
+    t.text     "notes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "days", force: true do |t|
     t.string   "date"
@@ -31,6 +42,20 @@ ActiveRecord::Schema.define(version: 20160131202902) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "lits", force: true do |t|
+    t.string   "exercise"
+    t.string   "set"
+    t.string   "reps"
+    t.string   "weight"
+    t.string   "time"
+    t.text     "notes"
+    t.integer  "fit_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "lits", ["fit_id"], name: "index_lits_on_fit_id"
 
   create_table "players", force: true do |t|
     t.string   "name"

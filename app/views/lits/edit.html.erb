@@ -1,0 +1,17 @@
+<h1>Editing Important Thing</h1>     
+
+<%= simple_form_for([@fit, @lit]) do |f| %> 
+	<%= f.text_field :exercise, placeholder: "Exercise Name" %><br>
+	<%= f.text_field :set, placeholder: "sets" %><br>
+	<%= f.text_field :reps, placeholder: "reps" %><br>
+	<%= f.text_field :weight, placeholder: "Weight" %><br>
+	<%= f.text_field :time, placeholder: "How long should it take?" %><br>
+	<%= f.text_area :notes, placeholder: "notes" %><br>
+	<%= f.submit %>
+<% end %>
+
+
+
+<%= link_to 'Show', @fit %> |
+<%= link_to 'Back', fits_path %>
+

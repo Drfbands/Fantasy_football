@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
 
 
-  resources :fits
+  resources :fits do 
+  	 resources :lits 
+  	end 
 
   resources :days do 
     resources :things 
