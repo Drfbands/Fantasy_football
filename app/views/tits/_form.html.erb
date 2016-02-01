@@ -1,0 +1,10 @@
+<%= form_for([@fit, @fit.tits.build]) do |f| %>
+	<%= f.text_field :exercise, placeholder: "Exercise Name" %><br>
+	<%= f.text_field :set, placeholder: "sets" %><br>
+	<%= f.text_field :reps, placeholder: "reps" %><br>
+	<%= f.text_field :weight, placeholder: "Weight" %><br>
+	<%= f.text_field :time, placeholder: "How long did it take?" %><br>
+	<%= f.text_area :notes, placeholder: "notes" %><br>
+	<%= f.text_area :growthrate, placeholder: "What's the growth rate" %><br>
+	<%= f.submit %>
+<% end %>

@@ -5,11 +5,25 @@
   <%= @fit.day %>
 </p>
 
+<h3>Preview of the Workout</h3><hr><br>
+
 
 	<%= render @fit.lits %><br>
 
 	<%= render "lits/form" %><br>
-	
+
+<br>
+<br>
+<h3> Review of the workout </h3><hr>
+
+<%= render @fit.tits %><br>
+
+	<%= render "tits/form" %><br>
+
+
 
 <%= link_to 'Edit', edit_fit_path(@fit) %> |
 <%= link_to 'Back', fits_path %>
+
+
+<%  "notes Add the output into tables where its the preview in one row, and the next row will be the review in the output. But its still two different forms that input the preview and the review from. Or two table of each, but the layout now is fucking terrible."   %>
