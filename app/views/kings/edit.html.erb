@@ -1,0 +1,16 @@
+<%= link_to 'Home', root_path %>
+<%= simple_form_for([@day, @king) do |f| %> 
+
+<h2> Editing The Review of the day </h2><br>
+
+
+<h2> Review of the day</h2>
+	<%= f.text_area :time, placeholder: "How long did it take?" %><br>
+	<%= f.text_area :notes, placeholder: "Notes" %><br>
+	<p> Add what you want to measure here each week. <br> At the end of each week add upp your growth rate.  </p> 
+	<%= f.text_area :growth, placeholder: "Growth rate per week" %><br>
+	<%= f.submit %>
+<% end %>
+
+<%= link_to 'Show', @day %> |
+<%= link_to 'Back', days_path %>

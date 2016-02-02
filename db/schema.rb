@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160201004708) do
+ActiveRecord::Schema.define(version: 20160202065619) do
 
   create_table "bits", force: true do |t|
     t.string   "exercise"
@@ -42,6 +42,17 @@ ActiveRecord::Schema.define(version: 20160201004708) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "kings", force: true do |t|
+    t.string   "time"
+    t.text     "notes"
+    t.text     "growth"
+    t.integer  "day_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "kings", ["day_id"], name: "index_kings_on_day_id"
 
   create_table "lits", force: true do |t|
     t.string   "exercise"

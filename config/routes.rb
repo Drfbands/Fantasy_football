@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   resources :days do 
     resources :things 
+    resources :kings
 
 
   end 
