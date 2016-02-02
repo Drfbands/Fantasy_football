@@ -4,7 +4,7 @@ class FitsController < ApplicationController
   # GET /fits
   # GET /fits.json
   def index
-    @fits = Fit.all
+    @fits = Fit.all.order('created_at DESC')
   end
 
   # GET /fits/1
