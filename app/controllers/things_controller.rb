@@ -16,7 +16,6 @@ def edit
 	@day = Day.find(params[:day_id])
  	@thing = @day.things.find(params[:id])
 end 
-
 	def update 
 		@day = Day.find(params[:day_id])
 		@thing = @day.things.find(params[:id])

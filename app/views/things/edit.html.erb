@@ -1,5 +1,5 @@
 <%= link_to 'Home', root_path %>
-<%= simple_form_for([@day, @thing]) do |f| %> 
+<%= form_for([@day, @day.things.build]) do |f| %>
 
 <h2> Editing The day </h2><br>
 	<h2>Preparation</h2>
