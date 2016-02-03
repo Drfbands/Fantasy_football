@@ -11,6 +11,7 @@ class ThingsController < ApplicationController
 			render 'new'
 	end
 end
+
 def edit 
 	@day = Day.find(params[:day_id])
  	@thing = @day.things.find(params[:id])
