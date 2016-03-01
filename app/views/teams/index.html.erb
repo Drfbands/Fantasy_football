@@ -32,4 +32,4 @@
 <br>
 <br> 
 
-<%= will_paginate @teams %>
+<%= will_paginate(@teams, :renderer => WillPaginate::ActionView::LinkRenderer) %>
