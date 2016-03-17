@@ -10,10 +10,29 @@
 </head>
 <body>
 
+	 
+
+     
+
 	<div class="container">
+		  <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><%= link_to "Home", root_path %></li>
+            <li role="presentation"><%= link_to 'Football', teams_path %></li>
+            <li role="presentation"><%= link_to 'Focus', days_path %></li>
+            <li role="presentation"><%= link_to 'Workout', fits_path %></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Win Today</h3>
+      </div>
+      <br>
+      <hr>
+      <br>
 
 
 		<%= yield %>
+
 
 	</div>
 </body>
