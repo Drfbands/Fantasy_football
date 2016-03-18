@@ -3,6 +3,11 @@ $jumbotron-bg: white;
 
 
 
+.center { 
+text-align: center; 
+}
+
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -21,4 +26,5 @@ $jumbotron-bg: white;
  *
  *= require_tree .
  *= require_self
+ 
  */
